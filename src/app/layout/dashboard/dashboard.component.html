@@ -1,0 +1,26 @@
+<div [@routerTransition]>
+    <h2 class="text-muted"></h2>
+    <div class="row">
+        <div class="col-md-12">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let slider of sliders">
+                    <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
+                    <div class="carousel-caption">
+                        <h3>{{slider.label}}</h3>
+                        <p>{{slider.text}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+
+    <hr />
+    <div class="row">
+        <div class="card card-default">
+            <div class="card-header">
+                ModelLink is a web application that optimises human resources distribution involved in improving business images and models participating at fashion-related events. This product works by using a resource allocation algorithm that connects certain criteria and the preferences of modelling designers or organizers with the availability of the models.
+            </div>
+
+        </div>
+    </div>
+</div>

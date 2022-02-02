@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<body>
+
+    <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+        <div class="list-group">
+            <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-dashboard"></i>&nbsp;
+                <span>{{ 'Dashboard' | translate }}</span>
+            </a>
+
+            <a [routerLink]="['/fashion-models']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fas fa-person-booth"></i>&nbsp;
+                <span>{{ 'Fashion models' | translate }}</span>
+            </a>
+
+            <a [routerLink]="['/designers']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fas fa-users"></i>&nbsp;
+                <span>{{ 'Designers' | translate }}</span>
+            </a>
+
+            <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
+                <span>{{ 'Charts' | translate }}</span>
+            </a>
+            <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+                <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
+                <span>{{ 'Collapse Sidebar' | translate }}</span>
+            </div>
+        </div>
+    </nav>
+</body>
+            

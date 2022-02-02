@@ -1,0 +1,53 @@
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div [@routerTransition]>
+        <br />
+        <br />
+        <div class="row" *ngIf="fashionModel">
+           <div class="col-md-6">
+              <div class="card-header">
+                 <h1>
+                    <span>{{fashionModel.name}}</span>
+                    <a href="{{fashionModel.facebook}}" target="_blank">
+                    <i class="fa fa-facebook btn float-right" style="font-size: 20px; color:#212529"></i></a>
+                    <a href="{{fashionModel.instagram}}" target="_blank">
+                    <i class="fa fa-instagram btn float-right" style="font-size: 20px; color:#212529"></i></a>
+                 </h1>
+              </div>
+                 <table class="table">
+                    <tr>
+                       <th>Height</th>
+                       <th>{{fashionModel.height}} cm</th>
+                    </tr>
+                    <tr>
+                       <th>Waight</th>
+                       <th>{{fashionModel.weight}} kg</th>
+                    </tr>
+                    <tr>
+                    <tr>
+                       <th>Breast</th>
+                       <th>{{fashionModel.breastSize}} cm</th>
+                    </tr>
+                    <tr>
+                       <th>Waist</th>
+                       <th>{{fashionModel.waistSize}} cm</th>
+                    </tr>
+                    <tr>
+                       <th>Eyes color</th>
+                       <th>{{fashionModel.eyesColor}}</th>
+                    </tr>
+                    <tr>
+                       <th>Hair color</th>
+                       <th>{{fashionModel.hairColor}}</th>
+                    </tr>
+                    <tr>
+                       <th>Description </th>
+                       <th>{{fashionModel.description}}</th>
+                    </tr>
+                 </table>
+              </div>
+              <div class="col-md-6">
+                 <div>
+                     <img src="{{fashionModel.photo ? fashionModel.photo : 'assets/images/fashionmodelplaceholder.png'}}" class="model-image"/>
+                  </div>
+              </div>
+           </div>
